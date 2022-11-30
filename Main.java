@@ -6,7 +6,7 @@ public class Main {
         int end = 20;
         int lenght = end - start;
         int sumArray = 0;
-        int sumNumber = ((start+end)/2)*(end-start+1);
+        int sumNumber = end*(end-1)/2-start*(start-1)/2;
         int missingNumber=0;
         ArrayGenerator arrayGenerator = new ArrayGenerator(lenght);
         int[]array = arrayGenerator.arrayInTheMiddle(start,end);
@@ -14,7 +14,7 @@ public class Main {
         for (int i = 0;i<lenght-1;i++){
             sumArray += array[i];
         }
-        missingNumber = (sumNumber-sumArray)-end;
+        missingNumber = (sumNumber-sumArray);
         System.out.println(missingNumber);
     }
 }
